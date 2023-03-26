@@ -52,8 +52,10 @@ int countPairs2(int *arr, int len, int value) {
 }
 int countPairs3(int *arr, int len, int value) {
     int scum = 0;
+    int value1 = 0;
     for (int i = 0; i < len - 1; ++i) {
-        scum = scum + Poisc(arr, i, len, value - arr[i]);
+        value1 = value - arr[i];
+        scum = scum + Poisc(arr, i, len, value1);
     }
     return scum;
 }
