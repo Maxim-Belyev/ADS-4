@@ -25,7 +25,7 @@ int Poisc(int* arr, int l, int r, int value) {
     int scum = 0;
     int mid = 0;
     int temp = 0;
-    while (l < r) {
+    while ((r - l) > 1) {
         mid = (l + r) / 2;
         if (arr[mid] == value) {
             scum = scum + 1;
